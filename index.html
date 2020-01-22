@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>REST Countries API</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css" />
+	</head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Where in the world</h1>
+        <button type="button" name="button" class="btn btn-toggle" id="btn-toggle">
+          <i class="far fa-moon"></i>
+          <i class="fas fa-moon"></i>
+          Dark Mode
+        </button>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <input class="search" id="search" type="text" placeholder="Search for a country" name="" value=""/>
+
+        <div class="dropdown" id="dropdown">
+          Filter by Region
+					<i class="fas fa-chevron-down" class="region"></i>
+          <ul>
+            <li>Africa</li>
+            <li>America</li>
+            <li>Asia</li>
+            <li>Europe</li>
+            <li>Oceania</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container countries" id="countries"></div>
+    </section>
+
+		<!-- Modal content -->
+		<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+	  <div class="modal-content">
+	  	<div class="modal-header">
+	      <span class="close" id="close">&times;</span>
+	    </div>
+			<div class="modal-body">
+				<div>
+					<img src="https://restcountries.eu/data/afg.svg" alt="">
+				</div>
+				<div id="modal-info">
+				</div>
+				<div id="modal-inf">
+				</div>
+			</div>
+	  	</div>
+
+	</div>
+
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

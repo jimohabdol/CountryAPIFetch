@@ -1,0 +1,228 @@
+@import url('https://fonts.google.com/specimen/Nunito+Sans');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-element: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+header {
+  background-color: var(--background-element);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+body.dark {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+  --background-element: hsl(209, 23%, 22%);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: space-between;
+  max-width: 1440px;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.btn-toggle {
+  background-color: var(--background-element);
+  color: inherit;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+}
+
+.btn-toggle .fas {
+  display: none;
+}
+
+body.dark .btn-toggle .fas {
+  display: inline-block;
+}
+
+body.dark .btn-toggle .far {
+  display: none;
+}
+
+.search {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  padding: 20px;
+  min-width: 250px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--background-element);
+
+}
+
+.search::placeholder {
+  color: inherit;
+}
+
+.dropdown {
+  background-color: var(--background-element);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown .fa-chevron-down {
+  margin: 10px;
+}
+
+.dropdown ul {
+  position: absolute;
+  display: none;
+  left: 0px;
+  top: 47px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  background-color: var(--background-element);
+  padding: 20px;
+  width: 100%;
+}
+
+.dropdown.open ul {
+  display: block;
+}
+
+.dropdown ul li {
+  margin: 5px 0;
+  list-style-type: none;
+}
+
+.country-card {
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  background-color: var(--background-element);
+  overflow: hidden;
+  width: 300px;
+  margin: 20px
+}
+
+.country-card-body {
+  padding: 30px;
+}
+
+.container.countries {
+  justify-content: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+.modal img {
+  max-width: 400px;
+}
+
+/* Modal Content */
+.modal-content {
+  padding: 30px;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--background-element);
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  color: white;
+}
+
+.modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+}
+
+#modal-info, #modal-inf{
+  height: 321px;
+padding: 25px 18px;
+font-size: smaller;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
